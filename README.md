@@ -61,11 +61,32 @@ To use BDD on Alexa-Projects we use [alexa-conversation](https://www.npmjs.com/p
 npm install --save-dev alexa-conversation
 ````
 
-Now create a directory named test in your project-root. inside this folder create a file test_index.js and open it.
+Now create a directory named test in your project-root. inside this folder create a file test_index.js and open it. (This is already done in branch: 2-Hello-World-BDD)
 
 ````
+const conversation = require('alexa-conversation');
+const app = require('../index.js'); // your Alexa skill's main file. `app.handle` needs to exist
 
+const opts = { // those will be used to generate the requests to your skill
+    name: 'Test Conversation',
+    app: app,
+    appId: 'amzn1.ask.skill.cee01027-f4c9-4b94-891f-fc314a47c3bf',
+    fixSpaces: true,
+    locale: 'de',
+    region: 'eu-west-1'
+    // Other optional parameters. See readme.md
+};
+
+// initialize the conversation
+conversation(opts)
+    .userSays('LaunchRequest')
+        .plainResponse.shouldEqual('Hello World!')
+    .userSays('HelloWorldIntent')
+        .plainResponse.shouldEqual('Hello World!')
+    .end();
 ````
+
+## Step 3: A more complex Skill
 
 ## Commandline Settings
 
