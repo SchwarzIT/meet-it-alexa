@@ -1,6 +1,9 @@
 const conversation = require('alexa-conversation');
 const app = require('../index.js'); // your Alexa skill's main file. `app.handle` needs to exist
 
+const I18n = require('../modules/i18n/i18n').I18n;
+let i18n = new I18n();
+
 const opts = { // those will be used to generate the requests to your skill
 	name: 'Test Conversation',
 	app: app,
@@ -14,8 +17,7 @@ const opts = { // those will be used to generate the requests to your skill
 // initialize the conversation
 conversation(opts)
 	.userSays('LaunchRequest')
-		.plainResponse.shouldEqual('Hello World!')
-	.userSays('HelloWorldIntent')
-		.plainResponse.shouldEqual('Hello World!')
-	.end();
-	
+	.plainResponse.shouldEqual(i18n.t('WELCOME', '0'), i18n.t('WELCOME_REPROMPT'))
+	.userSays('YesIntent')
+	.plainResponse.shouldEqual(i18n.t('SAY_NUMBER_TO_START'), i18n.t('SAY_NUMBER_TO_START_REPROMT'))
+.end();

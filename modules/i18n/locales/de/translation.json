@@ -1,0 +1,20 @@
+{
+    "BYE": "Bis bald!",
+    "CORRECT_ANSWER": "%s ist richtig! Möchtest du ein neues Spiel starten?",
+    "CORRECT_ANSWER_REPROMPT": "Sag 'Ja', um ein neues Spiel zu starten oder 'Nein' zum Beenden.",
+    "GUESSMODE_HELP": "Ich denke mir eine Zahl zwischen null und 100 aus. Versuche diese zu erraten und ich sage dir, ob meine Zahl größer oder kleiner ist.",
+    "GUESSMODE_HELP_REPROMPT": "Sag eine Zahl zwischen null und 100.",
+    "NOT_A_NUMBER": "Tut mir leid, das habe ich nicht verstanden. Bitte sag eine Zahl.",
+    "NOT_A_NUMBER_REPROMPT": "Bitte sag eine Zahl.",
+    "SAY_NUMBER_TO_START": "Schön! Sag eine Zahl, um mit dem Spiel zu starten.",
+    "SAY_NUMBER_TO_START_REPROMT": "Sag eine Zahl zwischen null und 100.",
+    "SAY_YES_OR_NO": "Sag 'Ja'oder 'Nein'.",
+    "STARTMODE_HELP": "Ich denke mir eine Zahl zwischen null und 100 aus. Versuche diese zu erraten und ich sage dir, ob meine Zahl größer oder kleiner ist. Willst du das Spiel starten?",
+    "STARTMODE_UNHANDLED": "Sag 'Ja', um ein neues Spiel zu starten oder 'Nein' zum Beenden.",
+    "TOO_HIGH": "%s ist zu hoch.",
+    "TOO_HIGH_REPROMPT": "Versuche, eine kleinere Zahl zu raten.",
+    "TOO_LOW": "%s ist zu niedrig.",
+    "TOO_LOW_REPROMPT": "Versuche, eine größere Zahl zu raten.",
+    "WELCOME": "Willkommen zum Alexa Workshop bei der Hochschule Heilbronn. Du hast das Zahlen-Ratespiel bisher %s Mal gespielt. Möchtest du ein neues Spiel starten?",
+    "WELCOME_REPROMPT": "Sag 'Ja', um ein neues Spiel zu starten oder 'Nein' zum Beenden."
+}
