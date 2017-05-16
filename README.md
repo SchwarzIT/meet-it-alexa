@@ -11,6 +11,48 @@
 
 ## Step 1: Get a simple skill working
 
+To start lean and simple, please checkout our branch: 1-Hello-World. Now go to console, cd into your checked out meet-it-alexa directory and run:
+
+```
+npm install
+```
+
+Now the dependencies from package.json are installed into a node_modules directory. Currently needed is only one dependency, `"alexa-sdk": "^1.0.9"` but the rest is coming soon.
+
+If you look at index.js, you'll see your first simple Hello-World-Skill for Amazon Alexa. This can be a first and good starting point for your explorations. Have fun!
+
+````
+'use strict';
+// Das Alexa-SDK wird geladen, siehe: https://github.com/alexa/alexa-skills-kit-sdk-for-nodejs
+var Alexa = require("alexa-sdk");
+
+// Alexa wird initialisiert und ausgeführt
+exports.handler = function(event, context, callback) {
+    var alexa = Alexa.handler(event, context);
+    alexa.registerHandlers(handlers);
+    alexa.execute();
+};
+
+// Die Skill-Hander für ein simples »Hello World!«
+var handlers = {
+	// Wird beim Start des Skills aufgerufen, ruft den Handler für SayHello auf
+    'LaunchRequest': function () {
+        this.emit('SayHello');
+    },
+    'HelloWorldIntent': function () {
+    	// Ein möglicher Intent, ruft ebenfalls SayHello auf
+        this.emit('SayHello')
+    },
+    'SayHello': function () {
+    	// Auf diesen Intent zeigen die beiden anderen. Diese internen Aufrufe bieten z.B. eine Möglichkeit in verschiedenen Kontexten eine gleichartige Ausgabe zu erzeugen.
+        this.emit(':tell', 'Hello World!');
+    }
+};
+
+````
+
+- 
+
 ## Step 2: Get BDD involved
 
 To use BDD on Alexa-Projects we use [alexa-conversation](https://www.npmjs.com/package/alexa-conversation), a mocha-plugin from [expedia.com](https://techblog.expedia.com/2017/02/13/conversational-integration-tests-for-your-alexa-skills-nodejs/). To get this up and running, first install it on your project:
