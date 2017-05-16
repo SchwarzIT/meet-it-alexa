@@ -195,6 +195,4 @@ If you have problems, find bugs or just want to leave feedback, please refer to 
 
 Have a lot of fun!
 
-Have a lot of fun!
-
 
