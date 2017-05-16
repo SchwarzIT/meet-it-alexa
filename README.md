@@ -6,6 +6,7 @@
 - npm
 - text-editor
 - Amazon Developer Account
+- AWS Account
 - Basic JavaScript-Skills
 
 
