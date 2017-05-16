@@ -1,0 +1,28 @@
+{
+  "name": "alexa-workshop-hhn",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Alexa Workshop Project for Meet IT @HHN 2017",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "keywords": [
+    "alexa",
+    "workshop",
+    "skill"
+  ],
+  "author": "Kaufland Informationssysteme GmbH & Co. KG",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "alexa-sdk": "^1.0.9",
+    "i18next": "^7.1.2",
+    "i18next-sprintf-postprocessor": "^0.2.2",
+    "i18next-sync-fs-backend": "^0.1.0"
+  },
+  "devDependencies": {
+    "alexa-conversation": "^0.1.0",
+    "eslint": "^3.18.0",
+    "mocha": "^3.2.0"
+  }
+}
