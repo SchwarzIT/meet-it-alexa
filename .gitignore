@@ -1,0 +1,8 @@
+logs/*
+!.gitkeep
+node_modules/
+tmp
+.vscode/
+.serverless/
+*.zip
+.idea
