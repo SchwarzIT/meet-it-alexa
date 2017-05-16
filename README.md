@@ -10,8 +10,7 @@
 - Basic JavaScript-Skills
 - Github-Account
 
-
-## Step 1: Get a simple skill working
+## [Step 1: Get a simple skill working](https://github.com/Kaufland/meet-it-alexa/tree/1-Hello-World)
 
 To start lean and simple, please clone our repo and checkout our branch: 1-Hello-World. 
 
@@ -64,7 +63,7 @@ var handlers = {
 
 ---
 
-## Step 2: Get BDD involved
+## [Step 2: Get BDD involved](https://github.com/Kaufland/meet-it-alexa/tree/2-Hello-World-BDD)
 
 To use BDD on Alexa-Projects we use [alexa-conversation](https://www.npmjs.com/package/alexa-conversation), a mocha-plugin from [expedia.com](https://techblog.expedia.com/2017/02/13/conversational-integration-tests-for-your-alexa-skills-nodejs/). To get this up and running, first install it on your project (In our Branch: 2-Hello-World-BDD this is already done):
 
@@ -122,7 +121,7 @@ Warning: Application ID is not set
 Now you have a simple Skill and a working BDD test environment, have a good time coding. If you are interested in more complex skills and more complex testing, see next step.
 
 
-## Step 3: Build a more complex Skill...
+## [Step 3: Build a more complex Skill](https://github.com/Kaufland/meet-it-alexa/tree/3-Getting-Complex)
 
 With this more complex skill some new things appear: 
 - In index.js there will be states for the application GUESSMODE and STARTMODE
