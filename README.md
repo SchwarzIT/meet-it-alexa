@@ -86,9 +86,20 @@ conversation(opts)
     .end();
 ````
 
-## Step 3: A more complex Skill
+## Step 3: Build a more complex Skill...
 
-## Commandline Settings
+With this more complex skill some new things appear: 
+- In index.js there will be states for the application GUESSMODE and STARTMODE
+- We'll use i18n to deal with translations
+- We'll use persistence with DynamoDB: `alexa.dynamoDBTableName = 'high-low-game'`
+- For local testing we need DynamoDB-Local and some environmental settings
+
+### Run DynamoDB-Local
+
+To run the DynamoDBLocal for local development with persistency, please install one of the jars found [here](http://docs.aws.amazon.com/amazondynamodb/latest/developerguide/DynamoDBLocal.html) and run it via: `java -Djava.library.path=./DynamoDBLocal_lib -jar DynamoDBLocal.jar -sharedDb`
+
+
+### Commandline Settings
 
 To run the mocha tests with enabled alexa-persistency on commandline you need to expose some environment variables because the internally used aws-sdk cannot acces the ~/.aws/config` but the envvars:
 
@@ -98,46 +109,17 @@ export AWS_REGION = eu-west-1
 export AWS_SECRET_ACCESS_KEY = your secret accesskey
 ```
 
-## Run DynamoDB-Local
 
-To run the DynamoDBLocal for local development with persistency, please install one of the jars found [here](http://docs.aws.amazon.com/amazondynamodb/latest/developerguide/DynamoDBLocal.html) and run it via: `java -Djava.library.path=./DynamoDBLocal_lib -jar DynamoDBLocal.jar -sharedDb`
 
 ## Further reading
 
 - [Setting AWS environment variables](http://docs.aws.amazon.com/cli/latest/topic/config-vars.html#general-options) (This is important if you get missing-region config bugs. )
 - [DynamoDBLocal](http://docs.aws.amazon.com/amazondynamodb/latest/developerguide/DynamoDBLocal.html)
-
-
-Step 3: Build a more complex Skill...
-
-## Vortrag:
-
-7 Blabla
-  Begriffe
-  Architektur, Unterstützte Runtimes für Lambda-Funktionen, SDK, Serverless
-  Voraussetzungen
-
-MS 15 Lambda Funktion
-MS 15 Skill anlegen
-MS 10 Hello World deployen
-MS 10 Test (Alexa Conversion)
-
-Skill erweitern
-- Reprompt vorführen, z. B. WELCOME_REPROMPT
-- HelpIntent vorführen
-- Wo man Lambda-Logs sehen kann
-
-Wo es den Code zum Herunterladen gibt
-
-
-----
-## Links
-
-* [Amazon Developer Account](https://developer.amazon.com) (free)
-* [AWS Account](https://aws.amazon.com) (credit card needed)
-* [Alexa Skills Kit SDK for Node.js](https://github.com/alexa/alexa-skills-kit-sdk-for-nodejs)
-* [Alexa Doc](https://developer.amazon.com/public/solutions/alexa/alexa-skills-kit/overviews/steps-to-build-a-custom-skill)
-* [Kaufland on GitHub](https://github.com/kaufland)
-* [Serverless Framework](https://serverless.com) (for easy deployment to AWS)
- * [AWS - Installation](https://serverless.com/framework/docs/providers/aws/guide/installation)
- * [AWS - Credentials](https://serverless.com/framework/docs/providers/aws/guide/credentials#creating-aws-access-keys)
+- [Amazon Developer Account](https://developer.amazon.com) (free)
+- [AWS Account](https://aws.amazon.com) (credit card needed)
+- [Alexa Skills Kit SDK for Node.js](https://github.com/alexa/alexa-skills-kit-sdk-for-nodejs)
+- [Alexa Doc](https://developer.amazon.com/public/solutions/alexa/alexa-skills-kit/overviews/steps-to-build-a-custom-skill)
+- [Kaufland on GitHub](https://github.com/kaufland)
+- [Serverless Framework](https://serverless.com) (for easy deployment to AWS)
+- [AWS - Installation](https://serverless.com/framework/docs/providers/aws/guide/installation)
+- [AWS - Credentials](https://serverless.com/framework/docs/providers/aws/guide/credentials#creating-aws-access-keys)

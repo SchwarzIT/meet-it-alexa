@@ -17,7 +17,7 @@ let i18n = new I18n();
 exports.handler = function (event, context, callback) {
     let alexa = Alexa.handler(event, context);
     alexa.appId = appId;
-    alexa.dynamoDBTableName = 'higl';
+    alexa.dynamoDBTableName = 'high-low-game';
     alexa.registerHandlers(newSessionHandlers, guessModeHandlers, startGameHandlers, guessAttemptHandlers);
     alexa.execute();
 };
