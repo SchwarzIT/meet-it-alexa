@@ -33,7 +33,7 @@ exports.handler = function(event, context, callback) {
     alexa.execute();
 };
 
-// Die Skill-Hander für ein simples »Hello World!«
+// Die Skill-Handler für ein simples »Hello World!«
 var handlers = {
 	// Wird beim Start des Skills aufgerufen, ruft den Handler für SayHello auf
     'LaunchRequest': function () {
